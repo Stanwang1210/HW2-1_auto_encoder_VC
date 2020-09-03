@@ -148,7 +148,7 @@ class Sampler(object):
         self.max_step = max_step
         self.seg_len = seg_len
         self.utt2len = self.get_utt_len()
-        self.speakers = list(self.f_h5[dset].keys())
+        self.speakers = list(self.f_h5[self.dset].keys())
         self.n_speaker = n_speaker
         self.speaker_used = self.speakers
         print(self.speaker_used)
