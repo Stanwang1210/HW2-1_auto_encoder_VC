@@ -7,11 +7,11 @@ import re
 from collections import defaultdict
 from tacotron.norm_utils import get_spectrograms 
 
-root_dir='./data/wav48'
+root_dir='./work/b07u1234/b07701209/HW2-1_auto_encoder_VC/Corpus/wav48'
 speaker_used_list=np.loadtxt('hps/en_speaker_used.txt')
 train_split=0.9
 
-def read_speaker_info(path='./data/speaker-info.txt'):
+def read_speaker_info(path='./work/b07u1234/b07701209/HW2-1_auto_encoder_VC/Corpus/speaker-info.txt'):
 	accent2speaker = defaultdict(lambda: [])
 	with open(path) as f:
 		splited_lines = [line.strip().split() for line in f][1:]
