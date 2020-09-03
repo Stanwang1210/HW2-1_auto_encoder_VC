@@ -172,9 +172,9 @@ class Sampler(object):
     def get_utt_len(self):
         mapping = {}
         for dset in ['train', 'test']:
-            for speaker in self.f_h5[f'{dset}']:
-                for utt_id in self.f_h5[f'{dset}/{speaker}']:
-                    length = self.f_h5[f'{dset}/{speaker}/{utt_id}/lin'][()].shape[0]
+            for speaker in self.f_h5[f'{self.dset}']:
+                for utt_id in self.f_h5[f'{self.dset}/{speaker}']:
+                    length = self.f_h5[f'{self.dset}/{speaker}/{utt_id}/lin'][()].shape[0]
                     mapping[(speaker, utt_id)] = length
         return mapping
 
