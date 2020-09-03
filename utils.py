@@ -136,8 +136,8 @@ class Sampler(object):
     def __init__(
         self, 
         h5_path, 
-        speaker_info_path='data/speaker-info.txt', 
-        utt_len_path='data/length.txt',
+        speaker_info_path='/work/b07u1234/b07701209/HW2-1_auto_encoder_VC/Corpus/speaker-info.txt', 
+        utt_len_path='/work/b07u1234/b07701209/HW2-1_auto_encoder_VC/Corpus/length.txt',
         dset='train',
         max_step=5, 
         seg_len=128,
