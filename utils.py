@@ -152,7 +152,7 @@ class Sampler(object):
         self.n_speaker = n_speaker
         self.speaker_used = self.speakers
         print(self.speaker_used)
-        self.speaker2utts = {speaker:list(self.f_h5[f'{dset}/{speaker}'].keys()) \
+        self.speaker2utts = {speaker:list(self.f_h5[f'{self.dset}/{speaker}'].keys()) \
                 for speaker in self.speakers}
         # remove too short utterence
         self.rm_too_short_utt(limit=self.seg_len)
